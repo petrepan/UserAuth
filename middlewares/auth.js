@@ -14,6 +14,7 @@ const auth = async (req, res, next) => {
       //verify secret
       const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
+      // if everything is good, save user detail to request for use in other routes
       req.user = await User.findById(decoded.id).select("-password");
 
       next();
