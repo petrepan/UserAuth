@@ -99,8 +99,10 @@ password: johndoe
 Before getting the list of all users, you need to ensure that a user is logged in. It accepts a header that contains an `authorization` key.
 
 ##### HEADER
-Accept: application/json
-authorization: Bearer {TOKEN}
+```
+    Accept: application/json
+    authorization: Bearer {TOKEN}
+```
 
 ```json
 {
